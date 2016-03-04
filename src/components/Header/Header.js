@@ -14,6 +14,9 @@ import Link from '../Link';
 import Navigation from '../Navigation';
 import Toolbar from 'material-ui/lib/toolbar/toolbar';
 import ToolbarGroup from 'material-ui/lib/toolbar/toolbar-group';
+import ToolbarSeparator from 'material-ui/lib/toolbar/toolbar-separator';
+import MenuItem from 'material-ui/lib/menus/menu-item';
+import DropDownMenu from 'material-ui/lib/DropDownMenu';
 
 class Header extends Component {
     render() {
@@ -26,8 +29,8 @@ class Header extends Component {
                   <span className={s.brandTxt}>Your Company</span>
               </ToolbarGroup>
               <Navigation className={s.nav}/>
-              <ToolbarSeperator />
-              <ToolbarGroup firstChild={true}>
+              <ToolbarSeparator />
+              <ToolbarGroup float="right">
                   <DropDownMenu value={1}>
                       <MenuItem value={1} primaryText="En-US" />
                       <MenuItem value={2} primaryText="Fr-FR" />

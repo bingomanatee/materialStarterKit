@@ -14,23 +14,22 @@ import s from './Navigation.scss';
 import Link from '../Link';
 import RaisedButton from 'material-ui/lib/raised-button';
 import ToolbarGroup from 'material-ui/lib/toolbar/toolbar-group';
-
+import ToolbarSeparator from 'material-ui/lib/toolbar/toolbar-separator';
 class Navigation extends Component {
 
-    static propTypes = {
-        className: PropTypes.string
-    };
+	static propTypes = {
+		className: PropTypes.string
+	};
 
-    render() {
-        return (
-          <ToolbarGroup float="right">
-              <RaisedButton label="About" onClick={Link.handleClick} to="/about"/>
-              <RaisedButton label="Contact" onClick={Link.handleClick} to="/contact"/>
-
-              <ToolbarSeparator />
-              <RaisedButton label="Log In" onClick={Link.handleClick} to="/login"/>
-          </ToolbarGroup>    );
-    }
+	render () {
+		return (
+				<ToolbarGroup float="right">
+					<RaisedButton label="About" onClick={Link.handleClick} primary={true} to="/about"/>
+					<RaisedButton label="Contact" onClick={Link.handleClick} primary={true} to="/contact"/>
+					<ToolbarSeparator />
+					<RaisedButton label="Log In" onClick={Link.handleClick} primary={true} to="/login"/>
+				</ToolbarGroup>    );
+	}
 }
 
 export default withStyles(Navigation, s);
